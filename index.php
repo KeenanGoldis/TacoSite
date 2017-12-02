@@ -8,15 +8,11 @@
 
   <!--bootstrap CSS-->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
   <!--these are my styles-->
   <link type="text/css" rel="stylesheet" href="css/style.css">
-
   <!--this is my font awesome -->
   <script src="https://use.fontawesome.com/a3bb4c7fa0.js"></script>
-
   <!--these are my google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <script type="text/javascript" src="javascript.js"></script>
@@ -27,7 +23,6 @@
   <header>
     <nav class="navbar navbar-static-top" role="navigation">
       <div class="container-fluid">
-    <!-- Collect the nav links for toggling -->
         <div class="collapse navbar-collapse navbar-static-top">
           <ul class="nav nav-pills">
             <li>
@@ -66,12 +61,19 @@
       <div class="container-fluid">
         <div class="row fixed-bg" id="secondRow">
           <div class="col-md-6 responsive-img locationPage" id="restLocPage">
-            <div class="openClosed" id='closedRest'>
-              <h4>Sorry, we're CLOSED right now.</h4>
-            </div>
-            <div class="openClosed" id='openRest'>
-              <h4>We're OPEN right now!</h4>
-            </div>
+            <?php
+              date_default_timezone_set('UTC');
+              echo date("l");
+              if (date("l") === "Saturday") {
+                echo "<div class=\"openClosed\" id=\"closedRest\"><h4>We're OPEN right now!</h4></div>";
+              } else if (date("l") === "Saturday") {
+                echo "<div class=\"openClosed\" id=\"closedRest\">
+                  <h4>Sorry, we're CLOSED right now.</h4>
+                </div>";
+              };
+             ?>
+
+
 
             <img src="https://lh3.googleusercontent.com/divzwMlMXF32016xLMGuIPhSMKQdU2NUmMnWuBIO-BcLswm6XkeLnm-S-ZEsFdg=w288-h384-n" alt="Pueblo Viejo Restaurant">
 
