@@ -57,7 +57,7 @@
 
     <!-- END OF MAIN PAGE -->
     <!-- START OF LOCATIONS -->
-
+<!-- PHP Open/Closed Sign Trailer A -->
       <div class="container-fluid">
         <div class="row fixed-bg" id="secondRow">
           <div class="col-md-6 responsive-img locationPage" id="restLocPage">
@@ -79,73 +79,86 @@
                 "<div class=\"openClosed\">
                   <h4>We're OPEN until Midnight tonight!</h4>
                 </div>";
-              } else {
-                echo "Something went wrong :(";
               };
              ?>
 
-
-
             <img src="https://lh3.googleusercontent.com/divzwMlMXF32016xLMGuIPhSMKQdU2NUmMnWuBIO-BcLswm6XkeLnm-S-ZEsFdg=w288-h384-n" alt="Pueblo Viejo Restaurant">
-
+<!-- Hours of Operation Food Truck A -->
             <div class="hoursOfOp">
-              <div class="mon">
-                <h6>Mon: 7:30am-10:00pm</h6>
-              </div>
-              <div class="tue">
-                <h6>Tue: 7:30am-10:00pm</h6>
-              </div>
-              <div class="wed">
-                <h6>Wed: 7:30am-10:00pm</h6>
-              </div>
-              <div class="thu">
-                <h6>Thu: 7:30am-2:30am</h6>
-              </div>
-              <div class="fri">
-                <h6>Fri: 7:30am-2:30am</h6>
-              </div>
-              <div class="sat">
-                <h6>Sat: 7:30am-2:30am</h6>
-              </div>
-              <div class="sun">
-                <h6>Sun: 7:30am-2:30am</h6>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6 responsive-img locationPage" id="trailerLocPage">
-<!-- OPEN or CLOSED SIGN -->
-            <div class="openClosed" id='closedTrailer'>
-              <h4>Sorry, we're CLOSED right now.</h4>
-            </div>
-            <div class="openClosed" id='openTrailer'>
-              <h4>We're OPEN right now!</h4>
-            </div>
-
-            <img src="https://s3-media3.fl.yelpcdn.com/bphoto/VAPwQMi0i-BLj9DP6klBVw/348s.jpg" alt="Pueblo Viejo Food Truck">
-
-            <div class="hoursOfOp">
-              <h5><em>Cesar Chavez</em> Food Truck Hours</h5>
               <div class="mon">
                 <h6>Mon: Closed</h6>
               </div>
               <div class="tue">
-                <h6>Tue: 5pm-12:00am</h6>
+                <h6>Tue: 7:00am-3:00pm</h6>
               </div>
               <div class="wed">
-                <h6>Wed: 5pm-12:00am</h6>
+                <h6>Wed: 7:00am-3:00pm</h6>
               </div>
               <div class="thu">
-                <h6>Thu: 5pm-2:30am</h6>
+                <h6>Thu: 7:00am-3:00pm</h6>
               </div>
               <div class="fri">
-                <h6>Fri: 5pm-2:30am</h6>
+                <h6>Fri: 7:00am-12:00am</h6>
               </div>
               <div class="sat">
-                <h6>Sat: 5pm-2:30am</h6>
+                <h6>Sat: 7:00am-12:00am</h6>
               </div>
               <div class="sun">
-                <h6>Sun: 11am-12:00am</h6>
+                <h6>Sun: Closed</h6>
+              </div>
+            </div>
+          </div>
+
+<!-- PHP Open/Closed Sign Trailer B -->
+          <div class="col-md-6 responsive-img locationPage" id="trailerLocPage">
+
+            <?php
+              date_default_timezone_set("America/Belize");
+              echo date('l jS \of F Y h:i:s A');
+              if (date("l") === "Sunday") {
+                $('.sun h6').css("color", "lime");
+                echo
+                "<div class=\"openClosed\">
+                  <h4>Sorry, we're closed today.</h4>
+                </div>";
+              } else if (date("l") === "Monday" || date("l") === "Tuesday" || date("l") === "Wednesday" || date("l") === "Thursday" && date("H") > 07 && date("H") < 22) {
+                echo
+                "<div class=\"openClosed\">
+                  <h4>We're OPEN until 10pm today!</h4>
+                </div>";
+              } else if (date("l") === "Friday" || date("l") === "Saturday" && date("H") > 07 && date("H") <=23){
+                echo
+                "<div class=\"openClosed\">
+                  <h4>We're OPEN until Midnight tonight!</h4>
+                </div>";
+              };
+
+            
+             ?>
+             <img src="https://s3-media3.fl.yelpcdn.com/bphoto/VAPwQMi0i-BLj9DP6klBVw/348s.jpg" alt="Pueblo Viejo Food Truck">
+<!-- Hours of Operation Food Truck B -->
+            <div class="hoursOfOp">
+              <h5><em>Cesar Chavez</em> Food Truck Hours</h5>
+              <div class="mon">
+                <h6>Mon: 7am-10:00pm</h6>
+              </div>
+              <div class="tue">
+                <h6>Tue: 7am-10:00pm</h6>
+              </div>
+              <div class="wed">
+                <h6>Wed: 7am-10:00pm</h6>
+              </div>
+              <div class="thu">
+                <h6>Thu: 7am-10:00pm</h6>
+              </div>
+              <div class="fri">
+                <h6>Fri: 7am-12:00am</h6>
+              </div>
+              <div class="sat">
+                <h6>Sat: 7am-12:00am</h6>
+              </div>
+              <div class="sun">
+                <h6>Sun: Closed</h6>
               </div>
             </div>
           </div>
