@@ -62,14 +62,25 @@
         <div class="row fixed-bg" id="secondRow">
           <div class="col-md-6 responsive-img locationPage" id="restLocPage">
             <?php
-              date_default_timezone_set('UTC');
-              echo date("l");
-              if (date("l") === "Saturday") {
-                echo "<div class=\"openClosed\" id=\"closedRest\"><h4>We're OPEN right now!</h4></div>";
-              } else if (date("l") === "Saturday") {
-                echo "<div class=\"openClosed\" id=\"closedRest\">
-                  <h4>Sorry, we're CLOSED right now.</h4>
+              date_default_timezone_set("America/Belize");
+              echo date('l jS \of F Y h:i:s A');
+              if (date("l") === "Sunday" || date("l") === "Monday") {
+                echo
+                "<div class=\"openClosed\">
+                  <h4>Sorry, we're closed today.</h4>
                 </div>";
+              } else if (date("l") === "Tuesday" || date("l") === "Wednesday" || date("l") === "Thursday" && date("H") > 07 && date("H") < 15) {
+                echo
+                "<div class=\"openClosed\">
+                  <h4>We're OPEN until 3pm today!</h4>
+                </div>";
+              } else if (date("l") === "Friday" || date("l") === "Saturday" && date("H") > 07 && date("H") <=23){
+                echo
+                "<div class=\"openClosed\">
+                  <h4>We're OPEN until Midnight tonight!</h4>
+                </div>";
+              } else {
+                echo "Something went wrong :(";
               };
              ?>
 
