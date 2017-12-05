@@ -50,7 +50,7 @@
       <div class="container-fluid">
         <div class="row fixed-bg" id="firstRow">
           <div class="col-md-12 responsive-img" id="topPage">
-            <h1>First Draft</h1>
+            <h1>Taco Truck</h1>
           </div>
         </div>
       </div>
@@ -85,6 +85,7 @@
             <img src="https://lh3.googleusercontent.com/divzwMlMXF32016xLMGuIPhSMKQdU2NUmMnWuBIO-BcLswm6XkeLnm-S-ZEsFdg=w288-h384-n" alt="Pueblo Viejo Restaurant">
 <!-- Hours of Operation Food Truck A -->
             <div class="hoursOfOp">
+              <h5><em>E. 6th Street</em> Food Truck Hours</h5>
               <div class="mon">
                 <h6>Mon: Closed</h6>
               </div>
@@ -116,7 +117,6 @@
               date_default_timezone_set("America/Belize");
               echo date('l jS \of F Y h:i:s A');
               if (date("l") === "Sunday") {
-                $('.sun h6').css("color", "lime");
                 echo
                 "<div class=\"openClosed\">
                   <h4>Sorry, we're closed today.</h4>
@@ -133,7 +133,7 @@
                 </div>";
               };
 
-            
+
              ?>
              <img src="https://s3-media3.fl.yelpcdn.com/bphoto/VAPwQMi0i-BLj9DP6klBVw/348s.jpg" alt="Pueblo Viejo Food Truck">
 <!-- Hours of Operation Food Truck B -->
@@ -217,7 +217,7 @@
             <img src="https://s3-media3.fl.yelpcdn.com/bphoto/PZPd-9E22Fj5AifrBefhfA/348s.jpg" alt="Pueblo Viejo Taco Trailer">
             <img src="https://previews.123rf.com/images/creatista/creatista1209/creatista120900038/15176860-Young-smiling-Latino-family-sitting-indoors-together-Stock-Photo.jpg" alt="Temporary People Picture">
             <img src="https://lh3.googleusercontent.com/divzwMlMXF32016xLMGuIPhSMKQdU2NUmMnWuBIO-BcLswm6XkeLnm-S-ZEsFdg=w288-h384-n" alt="Pueblo Viejo Logo">
-            <img src="" alt="">
+            <img src="http://www.bostonfoodtruckblog.com/wp-content/uploads/2015/10/how-to-start-a-food-truck.jpg" alt="Busy Taco Truck">
           </div>
         </div>
       </div>

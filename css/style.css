@@ -70,21 +70,14 @@ body{
   font-size: 220px;
   color: white;
   opacity: 0.8;
-
 }
 
 /*Start of Location Page*/
 
 .locationPage{
-  /*background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3062710.jpg");*/
   background-color: black;
-  /*background-image: url("/colorfulWood.jpg");*/
   background-repeat: no-repeat;
   background-size: cover;
-  background
-
-  /*background-color: darkgreen;*/
-
   color: white;
   height: 800px;
   margin-bottom: 20%;
@@ -107,6 +100,7 @@ body{
   max-height: 300px;
   width: 50%;
   border: solid 5px;
+  border-color: #111111;
 }
 
 .hoursOfOp{
@@ -125,11 +119,11 @@ body{
   font-size: 30px;
   color: lime;
 }
+
 .hoursOfOp h6{
   font-size: 26px;
   color: white;
   font-family: sans-serif !important;
-
 }
 
 /*Start of media Section*/
@@ -138,11 +132,6 @@ body{
    background-color: black;
    background-repeat: no-repeat;
    background-size: cover;
-   background
-
-   /*background-color: darkgreen;*/
-
-   color: white;
    height: 800px;
    margin-bottom: 20%;
    border-bottom: solid 10px;
@@ -165,7 +154,6 @@ body{
   font-size: 40px;
   padding-left: 15%;
   font-family: tacos;
-
 }
 
 .mediaLinks h6 {
@@ -185,7 +173,6 @@ body{
   justify-content: space-around;
 }
 
-
 /*End of Media Section*/
 /*Start of Our Story Section*/
 
@@ -201,5 +188,6 @@ body{
 }
 
 #ourStoryPics img{
-  max-width: 500px;
+  max-width: 275px;
+  margin: 50px;
 }
